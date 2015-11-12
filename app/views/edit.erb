@@ -1,0 +1,20 @@
+<h1>Edit A Player Knicks player!</h1>
+
+<main class="create_knicks_player" role ="main">
+  <form method="post" action="/knicks/<%=@knick.id%>">
+
+    <label>Name:</label>
+    <input id="edit_knicks_player" name="knick[name]" type="text" value="<%=@knick.try(:name)%>">
+
+
+    <label for="jersey_number">Jersey Number:</label>
+
+    <input id="jersey_number" name="knick[jersey_number]" type= "text" value="<%=@knick.try(:jersey_number)%>">
+
+    <label for="position">Position:</label>
+
+    <input id="position" name="knick[position]" type="text" value="<%=@knick.try(:position)%>">
+
+    <input type="submit" value="Edit Player!" class="button">
+  </form>
+</main>
